@@ -50,6 +50,9 @@ Dolgeon will be a dungeon crawler game where a dolphin character,
 - Defeat bosses to progress to lower, harder floors.
 - Taking damage and returning to the beginning upon loosing all health.
 
+Each area will be a collection of rooms which will contain a collection of
+tiles (floor and wall layers) and enemies. Some rooms may contain an item.
+
 ## Look
 As the player progresses, the look of the game will change.
 
@@ -57,6 +60,3 @@ As the player progresses, the look of the game will change.
 2. Shipwreck
 3. Flooded castle
 4. Caves
-
-Each area will be a collection of rooms which will contain a collection of
-tiles (floor and wall layers) and enemies. Some rooms may contain an item.
