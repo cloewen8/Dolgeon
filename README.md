@@ -12,6 +12,9 @@ published to other platforms.
 - Core files will be placed into the root of this repository.
 - Documentation will be in **docs**.
   - **items** - Describes collectable items.
+- Assets will be placed it **assets**.
+  - Images will be created as Aseprite project files.
+  - 3D assets will be made in Blender.
 
 ## Contributing
 Contributions are welcome! As long as:
