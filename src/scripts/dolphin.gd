@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export(float) var speed_forward = 10;
-export(float) var speed_back = 5;
+export(float) var speed_back = 7;
 export(float) var speed_mult = 1;
 export(float) var slow_speed_mult = 0.7;
 export(float) var rot_speed = 0.15;
