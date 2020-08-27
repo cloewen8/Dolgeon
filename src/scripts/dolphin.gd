@@ -41,9 +41,6 @@ func _process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP);
 	rotation_degrees += rot_velocity;
 	# Apply drag.
-	# todo: Having the drag be a multiplier, although more efficient,
-	# means drag can not be adjusted without also adjusting speed.
-	# Instead, decrease the vector length by a set amount.
 	if velocity.length() > 0:
 		velocity = velocity.normalized()*max(velocity.length() - drag*delta, 0);
 	if rot_velocity > 0:
