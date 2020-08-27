@@ -1,0 +1,178 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/dolphin.tscn" type="PackedScene" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Dolphin" parent="." instance=ExtResource( 1 )]
+position = Vector2( 511, 292 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 335.0
+margin_top = 222.0
+margin_right = 358.0
+margin_bottom = 244.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 650.0
+margin_top = 182.0
+margin_right = 673.0
+margin_bottom = 204.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 663.0
+margin_top = 369.0
+margin_right = 686.0
+margin_bottom = 391.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = 451.0
+margin_top = 496.0
+margin_right = 474.0
+margin_bottom = 518.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+margin_left = 384.0
+margin_top = 332.0
+margin_right = 407.0
+margin_bottom = 354.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+margin_left = 514.0
+margin_top = 53.0
+margin_right = 537.0
+margin_bottom = 75.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect7" type="ColorRect" parent="."]
+margin_left = 275.0
+margin_top = 83.0
+margin_right = 298.0
+margin_bottom = 105.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect8" type="ColorRect" parent="."]
+margin_left = 136.0
+margin_top = 18.0
+margin_right = 159.0
+margin_bottom = 40.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect9" type="ColorRect" parent="."]
+margin_left = 72.0
+margin_top = 211.0
+margin_right = 95.0
+margin_bottom = 233.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect10" type="ColorRect" parent="."]
+margin_left = 158.0
+margin_top = 343.0
+margin_right = 181.0
+margin_bottom = 365.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect11" type="ColorRect" parent="."]
+margin_left = 77.0
+margin_top = 490.0
+margin_right = 100.0
+margin_bottom = 512.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect12" type="ColorRect" parent="."]
+margin_left = 291.0
+margin_top = 517.0
+margin_right = 314.0
+margin_bottom = 539.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect13" type="ColorRect" parent="."]
+margin_left = 733.0
+margin_top = 557.0
+margin_right = 756.0
+margin_bottom = 579.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect14" type="ColorRect" parent="."]
+margin_left = 889.0
+margin_top = 512.0
+margin_right = 912.0
+margin_bottom = 534.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect15" type="ColorRect" parent="."]
+margin_left = 845.0
+margin_top = 349.0
+margin_right = 868.0
+margin_bottom = 371.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect16" type="ColorRect" parent="."]
+margin_left = 933.0
+margin_top = 172.0
+margin_right = 956.0
+margin_bottom = 194.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect17" type="ColorRect" parent="."]
+margin_left = 778.0
+margin_top = 54.0
+margin_right = 801.0
+margin_bottom = 76.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

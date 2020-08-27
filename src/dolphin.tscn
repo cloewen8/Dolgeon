@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/images/dolphin.png" type="Texture" id=1]
+[ext_resource path="res://src/images/dolphin_normal.png" type="Texture" id=2]
+[ext_resource path="res://src/images/light_test.png" type="Texture" id=3]
+[ext_resource path="res://src/scripts/dolphin.gd" type="Script" id=4]
+
+[node name="Dolphin" type="KinematicBody2D"]
+script = ExtResource( 4 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -20, -21 )
+editor_only = true
+texture = ExtResource( 3 )
+energy = 1.66
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 9 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -1, -7, 1, -7, 2, -5, 4, -1, 6, 5, 9, 6, 9, 7, 5, 8, 3, 14, 3, 19, 4, 21, 7, 24, -7, 24, -4, 21, -3, 19, -3, 14, -5, 8, -9, 7, -9, 6, -6, 5, -4, -1, -2, -5 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.4, 0.4 )
+smoothing_enabled = true
+smoothing_speed = 10.0

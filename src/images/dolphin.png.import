@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light_test.png-16fb18161140d6aa36b649537ebc318e.stex"
+path="res://.import/dolphin.png-f8b7aa36738823b30c08fdaf7976111e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/light_test.png"
-dest_files=[ "res://.import/light_test.png-16fb18161140d6aa36b649537ebc318e.stex" ]
+source_file="res://src/images/dolphin.png"
+dest_files=[ "res://.import/dolphin.png-f8b7aa36738823b30c08fdaf7976111e.stex" ]
 
 [params]
 

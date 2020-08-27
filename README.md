@@ -10,6 +10,9 @@ __This is the development version of Dolgeon.__ The release version will be
 published to other platforms.
 
 - Core files will be placed into the root of this repository.
+- Game files will be placed in **src**.
+  - **scripts** - Script assets.
+  - **images** - Exported image assets.
 - Documentation will be in **docs**.
   - **items** - Describes collectable items.
 - Assets will be placed it **assets**.

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dolphin.png-458f84feada4b52f5b3ed7bfa55baf31.stex"
+path="res://.import/dolphin_normal.png-c1ee6d4c42ea6612500678143e52f16e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/dolphin.png"
-dest_files=[ "res://.import/dolphin.png-458f84feada4b52f5b3ed7bfa55baf31.stex" ]
+source_file="res://src/images/dolphin_normal.png"
+dest_files=[ "res://.import/dolphin_normal.png-c1ee6d4c42ea6612500678143e52f16e.stex" ]
 
 [params]
 
@@ -18,7 +18,7 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
-compress/normal_map=0
+compress/normal_map=1
 flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
