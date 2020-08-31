@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends "res://src/scripts/enemy.gd"
 
 export(float) var speed = 0.3;
 var sprite;
