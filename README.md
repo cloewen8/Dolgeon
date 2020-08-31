@@ -13,6 +13,7 @@ published to other platforms.
 - Game files will be placed in **src**.
   - **scripts** - Script assets.
   - **images** - Exported image assets.
+  - **resources** - Resource files such as materials and nodes.
 - Documentation will be in **docs**.
   - **items** - Describes collectable items.
 - Assets will be placed it **assets**.
