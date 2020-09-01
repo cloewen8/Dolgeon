@@ -1,15 +1,120 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/images/dolphin.png" type="Texture" id=1]
 [ext_resource path="res://src/images/dolphin_normal.png" type="Texture" id=2]
 [ext_resource path="res://src/images/light_test.png" type="Texture" id=3]
 [ext_resource path="res://src/scripts/dolphin.gd" type="Script" id=4]
+[ext_resource path="res://src/images/attack_wave.png" type="Texture" id=5]
+[ext_resource path="res://src/scripts/attack_wave.gd" type="Script" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "attack_left"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -8, 3 ), Vector2( -10, -2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "attack_right"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8, 3 ), Vector2( 10, -2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:visible")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [node name="Dolphin" type="KinematicBody2D"]
 script = ExtResource( 4 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( -20, -21 )
+visible = false
+position = Vector2( -32, -23 )
 editor_only = true
 texture = ExtResource( 3 )
 energy = 1.66
@@ -28,3 +133,35 @@ current = true
 zoom = Vector2( 0.4, 0.4 )
 smoothing_enabled = true
 smoothing_speed = 10.0
+
+[node name="WaveAttack" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="Left" type="Area2D" parent="WaveAttack"]
+
+[node name="Sprite" type="Sprite" parent="WaveAttack/Left"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -8, 3 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WaveAttack/Left"]
+polygon = PoolVector2Array( -4, -7, -11, -6, -17, -1, -11, 3, -6, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WaveAttack/Left"]
+anims/attack_left = SubResource( 1 )
+
+[node name="Right" type="Area2D" parent="WaveAttack"]
+
+[node name="Sprite" type="Sprite" parent="WaveAttack/Right"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 8, 3 )
+scale = Vector2( 1e-05, 1e-05 )
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WaveAttack/Right"]
+polygon = PoolVector2Array( 4, -7, 11, -6, 17, -1, 10, 3, 6, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WaveAttack/Right"]
+anims/attack_right = SubResource( 4 )

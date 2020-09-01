@@ -18,9 +18,10 @@ func _ready():
 
 func _physics_process(delta):
 	# Move forward.
-	move_and_collide(dir*speed);
+	move_and_collide(dir*speed + velocity);
 	if ray.is_colliding():
 		# Change directions.
 		dir = -dir;
 		ray.cast_to = -ray.cast_to;
 		update_sprite();
+	._physics_process(delta);

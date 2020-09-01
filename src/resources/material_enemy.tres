@@ -3,16 +3,21 @@
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
 
-uniform bool damaged = true;
+uniform bool visible = true;
+uniform bool damaged = false;
 
 void fragment() {
-	COLOR = texture(TEXTURE, UV);
-	if (damaged)
-		COLOR = vec4(1.0, 1.0, 1.0, COLOR.a);
+	if (visible) {
+		COLOR = texture(TEXTURE, UV);
+		if (damaged)
+			COLOR = vec4(1.0, 1.0, 1.0, COLOR.a);
+	} else
+		COLOR = vec4(0.0);
 }
 "
 
 [resource]
 resource_local_to_scene = true
 shader = SubResource( 1 )
-shader_param/damaged = true
+shader_param/visible = true
+shader_param/damaged = false

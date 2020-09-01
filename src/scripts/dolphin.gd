@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+enum AttackType { LEFT, RIGHT, OTHER }
+
 export(float) var speed_forward = 10;
 export(float) var speed_back = 7;
 export(float) var speed_mult = 1;
@@ -12,6 +14,13 @@ export(float) var rot_drag = 3;
 var velocity = Vector2();
 var rot_velocity = 0;
 var curr_speed_mult;
+var attacks = [];
+
+func _ready():
+	var attack = $WaveAttack;
+	attacks.insert(AttackType.LEFT, attack);
+	attacks.insert(AttackType.RIGHT, attack);
+	attacks.insert(AttackType.OTHER, null);
 
 func add_input():
 	# Set rot_velocity.
@@ -35,6 +44,10 @@ func add_input():
 	elif rot_velocity < -max_rot:
 		rot_velocity = -max_rot;
 
+func attack(type):
+	if attacks[type] != null:
+		attacks[type].attack(type);
+
 func _process(delta):
 	add_input();
 	# Apply velocities.
@@ -47,3 +60,15 @@ func _process(delta):
 		rot_velocity = max(rot_velocity - rot_drag*delta, 0);
 	elif rot_velocity < 0:
 		rot_velocity = min(rot_velocity + rot_drag*delta, 0);
+
+func _input(event):
+	if event.is_action_pressed("character_attack"):
+		attack(AttackType.LEFT);
+		attack(AttackType.RIGHT);
+		attack(AttackType.OTHER);
+	elif event.is_action_pressed("character_attack_other"):
+		attack(AttackType.OTHER);
+	elif event.is_action_pressed("character_attack_left"):
+		attack(AttackType.LEFT);
+	elif event.is_action_pressed("character_attack_right"):
+		attack(AttackType.RIGHT);
