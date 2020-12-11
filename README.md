@@ -61,9 +61,11 @@ Each area will be a collection of rooms which will contain a collection of
 tiles (floor and wall layers) and enemies. Some rooms may contain an item.
 
 ## Look
-As the player progresses, the look of the game will change.
+The game will be based on 2D pixel art with a slanted overhead view (e.g. https://duckduckgo.com/?q=gungeon&t=newext&atb=v244-1&iax=images&ia=images). Scenary such as walls will be layered to create a psuedo 3D look (e.g. https://youtu.be/CWZvPZ5mGmY).
 
-1. Ocean floor (tutorial/lobby)
+Each time the player progresses to the next area, the theme will change:
+
+1. Ocean floor (tutorial/lobby) - Only loaded once.
 2. Shipwreck
 3. Flooded castle
 4. Caves
