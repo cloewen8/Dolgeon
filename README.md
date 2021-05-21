@@ -1,3 +1,13 @@
+**Important Notice!**
+Dolgeon is being resumed after careful consideration and major changes!
+
+1. I am going to start with the bare minimum first.
+2. Before making a full game, I will release a demo.
+3. Going to remake most of it from scratch.
+4. The new version will be closed source (I may be looking for help in the future).
+
+You may continue to work on this open-source version freely.
+
 # Dolgeon
 A procedural dolphin-themed dungeon crawler.
 
